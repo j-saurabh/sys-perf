@@ -5,6 +5,8 @@
 date=`date '+%B %d %Y'`
 time1=`date '+%r'`
 
+upt=`uptime | awk  -F'[, ]' '{print  $4" "$5}';`
+
 #For total, used and free memory, 'free' command shows more details. Here we have scrapped other values only to display the required values.
 
 total_mem=`free -h | head -2 | tail -1 |  awk '{print $2}'` 
@@ -22,6 +24,7 @@ echo -e "\n----------------------------------------------\n"
 
 echo -e "Date: $date"
 echo -e "Time: $time1\n"
+echo -e "The system has been up for : $upt \n"
 
 echo "------------------------------------------------"
 
@@ -31,5 +34,4 @@ echo -e "\n\t\tTotal\tUsed\tAvailable \n"
 echo -e "RAM : \t\t$total_mem\t$used_mem\t$free_mem" 
 
 echo -e "\nDisk Space: \t$total_disk\t$used_disk\t$avail_disk\n"
-
 
