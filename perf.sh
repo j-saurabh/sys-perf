@@ -19,6 +19,10 @@ total_disk=`df -h --output=size --total | awk 'END {print $1}'`
 used_disk=`df -h --output=used --total | awk 'END{print $1}'`
 avail_disk=`df -h --output=avail --total | awk 'END{print $1}'`
 
+process_cpu=`ps -eo user,pid,%cpu,comm --sort=-%cpu | head`
+
+process_mem=`ps -eo user,pid,%mem,comm --sort=-%mem | head`
+
 
 echo -e "\n----------------------------------------------\n"
 
@@ -35,3 +39,9 @@ echo -e "RAM : \t\t$total_mem\t$used_mem\t$free_mem"
 
 echo -e "\nDisk Space: \t$total_disk\t$used_disk\t$avail_disk\n"
 
+echo -e "\n----------------------------------------------\n"
+
+echo -e "\nThe Processes that are making use of most of the CPU :\n\n $process_cpu\n"
+
+echo -e "\nProcesses making most use of memory:\n\n $process_mem\n"
+                                                                                                                            47,1          Bot
