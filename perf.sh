@@ -32,7 +32,7 @@ echo -e "The system has been up for : $upt \n"
 
 echo "------------------------------------------------"
 
-#Used the tabs in order to display values in my editor.
+#Used the tabs in order to display values in correct order as per my editor. 
 echo -e "\n\t\tTotal\tUsed\tAvailable \n"
 
 echo -e "RAM : \t\t$total_mem\t$used_mem\t$free_mem" 
@@ -45,3 +45,4 @@ echo -e "\nThe Processes that are making use of most of the CPU :\n\n $process_c
 
 echo -e "\nProcesses making most use of memory:\n\n $process_mem\n"
                                                                                                                             47,1          Bot
+#Any new additions are welcome
