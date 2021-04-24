@@ -19,6 +19,7 @@ total_disk=`df -h --output=size --total | awk 'END {print $1}'`
 used_disk=`df -h --output=used --total | awk 'END{print $1}'`
 avail_disk=`df -h --output=avail --total | awk 'END{print $1}'`
 
+#Top processes which are using the most CPU and memory
 process_cpu=`ps -eo user,pid,%cpu,comm --sort=-%cpu | head`
 
 process_mem=`ps -eo user,pid,%mem,comm --sort=-%mem | head`
