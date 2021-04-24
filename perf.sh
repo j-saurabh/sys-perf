@@ -44,5 +44,5 @@ echo -e "\n----------------------------------------------\n"
 echo -e "\nThe Processes that are making use of most of the CPU :\n\n $process_cpu\n"
 
 echo -e "\nProcesses making most use of memory:\n\n $process_mem\n"
-                                                                                                                            47,1          Bot
+
 #Any new additions are welcome
