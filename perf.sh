@@ -45,4 +45,3 @@ echo -e "\nThe Processes that are making use of most of the CPU :\n\n $process_c
 
 echo -e "\nProcesses making most use of memory:\n\n $process_mem\n"
 
-#Any new additions are welcome
