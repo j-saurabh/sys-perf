@@ -5,7 +5,7 @@
 date=`date '+%B %d %Y'`
 time1=`date '+%r'`
 
-upt=`uptime | awk  -F'[, ]' '{print  $4" "$5}';`
+upt=`uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7=="min") m=$6; else {if($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print "System is up since: "d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 
 #For total, used and free memory, 'free' command shows more details. Here we have scrapped other values only to display the required values.
 
@@ -28,7 +28,7 @@ echo -e "\n----------------------------------------------\n"
 
 echo -e "Date: $date"
 echo -e "Time: $time1\n"
-echo -e "The system has been up for : $upt \n"
+echo -e "$upt\n"
 
 echo "------------------------------------------------"
 
