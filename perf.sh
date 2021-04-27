@@ -1,9 +1,11 @@
-#! /bin/bash
+#!/bin/bash                
 
 #Used date and time so it shows when the time when script runs and the memory details for that time.
 
 date=`date '+%B %d %Y'`
 time1=`date '+%r'`
+
+#For system uptime, we have used uptime command and in order to print in a readable way, we have used awk to print it in the certain order 
 
 upt=`uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7=="min") m=$6; else {if($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print "System is up since: "d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 
