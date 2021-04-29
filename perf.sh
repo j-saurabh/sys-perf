@@ -29,6 +29,7 @@ process_mem=`ps -eo user,pid,%mem,comm --sort=-%mem | head`
 
 echo -e "\n----------------------------------------------\n"
 
+echo -e "--Current System date and time--\n\n"
 echo -e "Date: $date"
 echo -e "Time: $time1\n"
 echo -e "$upt\n"
