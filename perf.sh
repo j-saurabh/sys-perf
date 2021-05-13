@@ -1,4 +1,7 @@
+#This is a bash script so the first line apart from this comment is the shebang and the path for the bash. 
+
 #!/bin/bash                
+
 
 #Used date and time so it shows when the time when script runs and the memory details for that time.
 
